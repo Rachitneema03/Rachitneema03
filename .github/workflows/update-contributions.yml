@@ -1,0 +1,52 @@
+name: Update GitHub contributions
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '.github/workflows/update-contributions.yml'
+      - 'scripts/fetch_contributions.py'
+      - 'scripts/render_heatmap_svg.py'
+      - 'README.md'
+
+jobs:
+  refresh-contributions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip requests beautifulsoup4
+
+      - name: Refresh contribution JSON and SVG
+        run: |
+          python scripts/fetch_contributions.py --username rachitneema03 --output data/contributions.json
+          python scripts/render_heatmap_svg.py --input data/contributions.json --output contrib-heatmap.svg
+
+      - name: Commit updated contribution files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/contributions.json contrib-heatmap.svg
+          if git diff --cached --quiet; then
+            echo "No contribution updates to commit."
+          else
+            git commit -m "chore: refresh GitHub contribution data"
+            git push
+          fi
