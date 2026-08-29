@@ -4,10 +4,6 @@
   <img alt="Rachitneema03's GitHub profile" src="dark_mode.svg" />
 </picture>
 
-# 💫 About Me:
-Hi, I'm Rachit Neema 👋<br><br>🎓 2nd-year B.Tech (IT) Student<br><br>💻 Skilled in Java, C++, Python | Web: MERN , TailwindCSS <br><br>⚡ DSA |☁️ Exploring Cloud | 🔐 Cybersecurity | <br><br>🚀 Love building projects & learning through collaboration<br><br>📫 Open to internships, open-source, and tech opportunities!
-
-
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/rachit-neema/) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/https://x.com/rachitneema3) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:rachitneemawork@gmail.com) 
 
