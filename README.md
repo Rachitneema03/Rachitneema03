@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
+  <img alt="Rachitneema03's GitHub profile" src="dark_mode.svg" />
+</picture>
+
 # 💫 About Me:
 Hi, I'm Rachit Neema 👋<br><br>🎓 2nd-year B.Tech (IT) Student<br><br>💻 Skilled in Java, C++, Python | Web: MERN , TailwindCSS <br><br>⚡ DSA |☁️ Exploring Cloud | 🔐 Cybersecurity | <br><br>🚀 Love building projects & learning through collaboration<br><br>📫 Open to internships, open-source, and tech opportunities!
 
